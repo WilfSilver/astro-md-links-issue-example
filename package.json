@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/starlight": "^0.15.1",
     "astro": "^4.0.1",
-    "astro-rehype-relative-markdown-links": "^0.4.4",
+    "astro-rehype-relative-markdown-links": "https://github.com/vernak2539/astro-rehype-relative-markdown-links#index-links",
     "sharp": "^0.32.5"
   },
   "packageManager": "yarn@4.0.2"

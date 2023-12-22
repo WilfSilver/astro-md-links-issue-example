@@ -1,3 +1,4 @@
+import * as path from "path";
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
@@ -5,7 +6,12 @@ import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-lin
 // https://astro.build/config
 export default defineConfig({
   markdown: {
-    rehypePlugins: [rehypeAstroRelativeMarkdownLinks],
+    rehypePlugins: [
+      () =>
+        rehypeAstroRelativeMarkdownLinks({
+          contentPath: ["src", "content", "docs"].join(path.sep),
+        }),
+    ],
   },
   integrations: [
     starlight({
